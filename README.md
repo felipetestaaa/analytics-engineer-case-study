@@ -58,3 +58,5 @@ Este [link](https://medium.com/cargox-tecnologia/an%C3%A1lise-de-cohort-em-pytho
 ##### 1ª Entrega: Construir as queries em SQL 
 Nessa primeira entrega você deve construir uma query para cada tabela que no final vai gerar a tabela requisitada pelo time de CRM. Os dados estão disponíveis no BigQuery no projeto [data-case-study-322621](https://console.cloud.google.com/bigquery?project=data-case-study-322621). Iremos criar um usuário para você realizar consultas no próprio BigQuery via interface, esse usuário será criado com o email fornecido por você.
 Para facilitar o entendimento das tabelas raw do dataset estamos disponibilizando as relações entre elas e as chaves. Atenção, como os dados são raw podem haver inconsistências nos dados.
+
+![image](.img/model.png)
