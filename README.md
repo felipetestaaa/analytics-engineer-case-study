@@ -24,10 +24,10 @@ Com isso em mente, construimos a nossa estrutura, segue o desenho: ![Data Stack]
 ### Desafio
 
 ##### Projeto: Placar do Cliente
-Com o crescimento exponencial da nossa empresa, o time de CRM, responsável pelas comunicações de relação com o cliente, resolveu realizar um estudo para entender melhor cada cliente na nossa plataforma e assim conseguir se posicionar melhor nas nossas comunicações. Para isso o time de CRM solicitou as seguinte tabelas a serem construídas pelo time de dados:
+Com o crescimento exponencial da nossa empresa, o time de CRM, responsável pelas comunicações de relação com o cliente, resolveu realizar um estudo para entender melhor cada cliente na nossa plataforma e assim conseguir se posicionar melhor nas nossas comunicações. Para isso o time de CRM solicitou a seguinte tabela a ser construída pelo time de dados:
 
 ##### *customer_metrics*
-   - **customer_id**Esse é o id do customer da tabela customers, usamos para identificar cada usuário.
+   - **customer_id**: Esse é o id do customer da tabela customers, usamos para identificar cada usuário.
    - **customer_city**: Cidade do nosso cliente.
    - **customer_state**: Estado do nosso cliente.
    - **recency**: Recência é definida da diferença de dias da última compra do cliente com a data atual. Ex: Hoje é dia 2021-12-10 e o cliente fez o seu último pedido no dia 2021-12-01, portanto recência é 9 (dias). 
@@ -37,26 +37,23 @@ Com o crescimento exponencial da nossa empresa, o time de CRM, responsável pela
    - **basket_size**: Divisão entre  qty_items_delivered/frequency, como resultado é quantidade média de itens por pedido.
    - **avg_reviews_score**: É a média dos review score de cada cliente.
 
-##### *customer_cohort*
-   - **month**: Esse é o mês do primeiro pedido entregue do cliente.
-   - **M0**: Esse valor sempre vai ser 100%.
-   - **M1**: Percentual de clientes que realizaram mais um pedido no mês seguinte (M+1) comparado com M0.
-   - **M2**:  Percentual de clientes que realizaram mais um pedido a 2 meses após a primeira compra (M+2).
-   - **M3**:  Percentual de clientes que realizaram mais um pedido a 3 meses após a primeira compra (M+3).
-   - **M4**:  Percentual de clientes que realizaram mais um pedido a 4 meses após a primeira compra (M+4).
-   - **M5**:  Percentual de clientes que realizaram mais um pedido a 5 meses após a primeira compra (M+5).
-   - **M6**:  Percentual de clientes que realizaram mais um pedido a 6 meses após a primeira compra (M+6).
-   - **M7**:  Percentual de clientes que realizaram mais um pedido a 7 meses após a primeira compra (M+7).
-   - **M8**:  Percentual de clientes que realizaram mais um pedido a 8 meses após a primeira compra (M+8).
-   - **M9**:  Percentual de clientes que realizaram mais um pedido a 9 meses após a primeira compra (M+9).
-   - **M10**:  Percentual de clientes que realizaram mais um pedido a 10 meses após a primeira compra (M+10).
-   - **M11**:  Percentual de clientes que realizaram mais um pedido a 11 meses após a primeira compra (M+11).
-   - **M12**:  Percentual de clientes que realizaram mais um pedido a 12 meses após a primeira compra (M+12).
+##### Projeto: Entregando a melhor experiência
+Com o aumento das vendas, uma preocupação da liderança é manter a qualidade dos nossos sellers. Assim, o time responsável pela experienência do cliente (CX) solicitou uma tabela para realizarem um estudo como podemos identificar novas oportunidades nesse quesito. Para isso, temos que construir a seguinte tabela:
 
-Este [link](https://medium.com/cargox-tecnologia/an%C3%A1lise-de-cohort-em-python-9766948f9af) tem mais detalhes de como é um gráfico de cohort. 
+##### *sellers_metrics*
+   - **seller_id**: Esse é o id do seller da tabela sellers, usamos para identificar cada seller.
+   - **seller_city**: Cidade do nosso seller.
+   - **sellerr_state**: Estado do nosso seller.
+   - **qty_orders_delivered**:  Quantidade total de pedidos entregues.
+   - **qty_items_delivered**:  Quantidade total de itens entregues.
+   - **basket_size**: Divisão entre  qty_items_delivered/qty_orders_delivered, como resultado é quantidade média de itens por pedido.
+   -  **qty_orders_ontime**:  Quantidade total de pedidos entregues dentro do prazo estabelecido.
+   -  **avg_reviews_score**: É a média dos review score de cada cliente.
+   -  **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerar as orders atrasadas.
+   -  **avg_delivery_ontime_days**: Tempo médio de quanto tempo demora uma entrega, somente considerar as orders ontime.
 
 ##### 1ª Entrega: Construir as queries em SQL 
-Nessa primeira entrega você deve construir uma query para cada tabela que no final vai gerar a tabela requisitada pelo time de CRM. Os dados estão disponíveis no BigQuery no projeto [data-case-study-322621](https://console.cloud.google.com/bigquery?project=data-case-study-322621). Iremos criar um usuário para você realizar consultas no próprio BigQuery via interface, esse usuário será criado com o email fornecido por você.
+Nessa primeira entrega você deve construir a query no BigQuery que no final vai gerar a tabela requisitada nos dois projetos. Os dados estão disponíveis no BigQuery no projeto [data-case-study-322621](https://console.cloud.google.com/bigquery?project=data-case-study-322621). Iremos criar um usuário para você realizar consultas no próprio BigQuery via interface, esse usuário será criado com o email fornecido por você.
 Para facilitar o entendimento das tabelas raw do dataset estamos disponibilizando as relações entre elas e as chaves. Atenção, como os dados são raw podem haver inconsistências nos dados.
 
 ![image](.img/model.png)
