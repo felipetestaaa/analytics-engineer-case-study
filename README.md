@@ -37,8 +37,8 @@ Com o crescimento exponencial da nossa empresa, o time de CRM, responsável pela
    - **basket_size**: Divisão entre  qty_items_delivered/frequency, como resultado é quantidade média de itens por pedido.
    - **avg_reviews_score**: É a média dos review score de cada cliente.
 
-##### Projeto: Entregando a melhor experiência
-Com o aumento das vendas, uma preocupação da liderança é manter a qualidade dos nossos sellers. Assim, o time responsável pela experienência do cliente (CX) solicitou uma tabela para realizarem um estudo como podemos identificar novas oportunidades nesse quesito. Para isso, temos que construir a seguinte tabela:
+##### Projeto: A melhor experiência
+Com o aumento das vendas, uma preocupação da liderança é manter a qualidade dos nossos sellers. Assim, o time responsável pela experiência do cliente (CX) solicitou uma tabela para realizarem um estudo como podemos identificar novas oportunidades nesse quesito. Para isso, temos que construir a seguinte tabela:
 
 ##### *sellers_metrics*
    - **seller_id**: Esse é o id do seller da tabela sellers, usamos para identificar cada seller.
@@ -49,11 +49,21 @@ Com o aumento das vendas, uma preocupação da liderança é manter a qualidade 
    - **basket_size**: Divisão entre  qty_items_delivered/qty_orders_delivered, como resultado é quantidade média de itens por pedido.
    -  **qty_orders_ontime**:  Quantidade total de pedidos entregues dentro do prazo estabelecido.
    -  **avg_reviews_score**: É a média dos review score de cada cliente.
-   -  **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerar as orders atrasadas.
+   -  **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerando as orders atrasadas.
    -  **avg_delivery_ontime_days**: Tempo médio de quanto tempo demora uma entrega, somente considerar as orders ontime.
 
-##### 1ª Entrega: Construir as queries em SQL 
-Nessa primeira entrega você deve construir a query no BigQuery que no final vai gerar a tabela requisitada nos dois projetos. Os dados estão disponíveis no BigQuery no projeto [data-case-study-322621](https://console.cloud.google.com/bigquery?project=data-case-study-322621). Iremos criar um usuário para você realizar consultas no próprio BigQuery via interface, esse usuário será criado com o email fornecido por você.
+##### O que você deve entregar no final? 
+Como entrega do case você deverá fornecer os seguintes arquivos:
+
+* Arquivo .sql que irá gerar a tabela customer_metrics.
+* Arquivo .sql que irá gerar a tabela sellers_metrics.
+* Uma apresentação tipo slides (PowerPoint, Google Presentation, etc) no seguinte formato:
+
+  - Breve apresentação pessoal: Formação, um pouco de sua experiência e hobbies/fun-facts (~5 min).
+  - Análises dos dados, quais checks você fez e um pouco de como pensou o desenvolvimento (~20 min).
+  - Perguntas e dúvidas para o nosso time. (~10min)
+
+Os dados estão disponíveis no BigQuery no projeto [data-case-study-322621](https://console.cloud.google.com/bigquery?project=data-case-study-322621). Iremos criar um usuário para você realizar consultas no próprio BigQuery via interface, esse usuário será criado com o email fornecido por você.
 Para facilitar o entendimento das tabelas raw do dataset estamos disponibilizando as relações entre elas e as chaves. Atenção, como os dados são raw podem haver inconsistências nos dados.
 
 ![image](.img/model.png)
