@@ -47,7 +47,6 @@ Com o aumento das vendas, uma preocupação da liderança é manter a qualidade 
    - **qty_items_delivered**: Quantidade total de itens entregues.
    - **basket_size**: Divisão entre qty_items_delivered/qty_orders_delivered, resultando na quantidade média de itens por pedido.
    - **qty_orders_ontime**: Quantidade total de pedidos entregues dentro do prazo estabelecido.
-   - **avg_reviews_score**: É a média dos review scores do vendedor.
    - **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerando as orders atrasadas.
    - **avg_delivery_ontime_days**: Tempo médio de para realizar uma entrega, somente considerarando as orders ontime.
 
