@@ -35,7 +35,6 @@ Com o crescimento exponencial da nossa empresa, o time de CRM, responsável pela
    - **monetary_value**: Monetary Value é definido como a soma total do preço e frete de todos os pedidos entregues do cliente.
    - **qty_items_delivered**: Soma total de todos os itens que foram entregues ao cliente. 
    - **basket_size**: Divisão entre  qty_items_delivered/frequency, como resultado é quantidade média de itens por pedido.
-   - **avg_reviews_score**: É a média dos review score de cada cliente.
 
 ##### Projeto: A melhor experiência
 Com o aumento das vendas, uma preocupação da liderança é manter a qualidade dos nossos sellers. Assim, o time responsável pela experiência do cliente (CX) solicitou uma tabela para realizarem um estudo como podemos identificar novas oportunidades nesse quesito. Para isso, temos que construir a seguinte tabela:
@@ -48,7 +47,6 @@ Com o aumento das vendas, uma preocupação da liderança é manter a qualidade 
    - **qty_items_delivered**:  Quantidade total de itens entregues.
    - **basket_size**: Divisão entre  qty_items_delivered/qty_orders_delivered, como resultado é quantidade média de itens por pedido.
    -  **qty_orders_ontime**:  Quantidade total de pedidos entregues dentro do prazo estabelecido.
-   -  **avg_reviews_score**: É a média dos review score de cada cliente.
    -  **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerando as orders atrasadas.
    -  **avg_delivery_ontime_days**: Tempo médio de quanto tempo demora uma entrega, somente considerar as orders ontime.
 
