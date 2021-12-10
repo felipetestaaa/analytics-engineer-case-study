@@ -48,7 +48,7 @@ Com o aumento das vendas, uma preocupação da liderança é manter a qualidade 
    - **basket_size**: Divisão entre qty_items_delivered/qty_orders_delivered, resultando na quantidade média de itens por pedido.
    - **qty_orders_ontime**: Quantidade total de pedidos entregues dentro do prazo estabelecido.
    - **avg_delivery_late_days**: Tempo médio de dias de atraso, somente considerando as orders atrasadas.
-   - **avg_delivery_ontime_days**: Tempo médio de para realizar uma entrega, somente considerarando as orders ontime.
+   - **avg_delivery_ontime_days**: Tempo médio de para realizar uma entrega, somente considerando as orders ontime.
 
 ##### O que você deve entregar no final? 
 Como entrega do case você deverá fornecer os seguintes arquivos:
